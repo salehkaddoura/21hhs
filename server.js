@@ -10,7 +10,7 @@ app.use(
         src: __dirname + '/sass',
         dest: __dirname + '/app',
         debug: true,
-        outputStyle: 'expanded', 
+        outputStyle: 'compressed', 
     })
 );
 
@@ -18,7 +18,7 @@ app.set('views', __dirname + '/app');
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(__dirname + '/app'));
 
 app.get('/', function(req, res) {
     res.render('index');

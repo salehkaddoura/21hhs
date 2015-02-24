@@ -1,6 +1,44 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,300);
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,500);
 
+@charset "UTF-8";
+
+// Mixins
+@import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/typography";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/materialbox";
+@import "components/form";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/date_picker/default.scss";
+@import "components/date_picker/default.date.scss";
+@import "components/date_picker/default.time.scss";
+
 $white: #FFF;
 $clouds: #ecf0f1;
 $font-color: #41658A;
@@ -8,48 +46,43 @@ $font-color: #41658A;
 
 
 body {
-    padding-top: 70px;
+    // padding-top: 70px;
 }
 
-.navbar {
-    margin-bottom: 0;
-    padding: 8px 0;
+.fa-none {
+    vertical-align: initial;
 }
 
-
-.navbar-default {
+.nav-wrapper {
     background-color: $white;
     border-color: $clouds;
 
-    .navbar-brand {
+    .brand-logo {
         color: #304A72;
         font-family: 'Cabin';
-        font-size: 24px;
+        // font-size: 24px;
         text-transform: uppercase;
     }
 
-    .navbar-brand:hover {
+    .brand-logo:hover {
         color: #97D5A4;
     }
 }
 
-ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;    
-}
+// ul.nav li.dropdown:hover > ul.dropdown-menu {
+//     display: block;    
+// }
 
-.dropdown-menu {
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
+.dropdown-content {
     font-family: 'Raleway';
     font-size: 14px;
     text-transform: uppercase;
     color: #304A72;
 }
 
-.dropdown-menu li {
-    padding: 2px 0;
-}
+// .dropdown-menu li {
+//     padding: 2px 0;
+// }
 
 .number-wrap {
     margin: 8px 15px;
@@ -60,23 +93,23 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
     font-family: 'Cabin' !important;
 }
 
-.navbar-default .navbar-nav > li > a {
+.right > li > a {
     color: #304A72;
     font-family: 'Raleway';
     font-size: 16px;
     text-transform: uppercase;
 }
 
-.navbar-default .navbar-nav > li > .active {
+.right > li > .active {
     color: #97D5A4;
     font-weight: 500;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.right > li > a:hover {
     color: #97D5A4;
 }
 
-.btn-default {
+.btn {
     color: $white;
     background-color: #16a085;
     border: none;
@@ -152,11 +185,28 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 
-footer {
+.footer-row {
+    margin-bottom: 0;
+}
+
+.footer {
+    border-top: 1px solid $clouds;
+    margin-top: 5%;
+}
+
+.footer-wrap {
     height: 50px;
     padding: 5px 0;
-    margin-top: 5%;
-    border-top: 1px solid $clouds;
+    
+    ul {
+        margin-bottom: 0;
+
+        li{
+            float: left;
+            list-style: none;
+            padding: 10px;
+        }
+    }
 }
 
 .footer-wrap ul {
@@ -164,18 +214,18 @@ footer {
 }
 
 .footer-wrap ul li {
-    float: left;
-    list-style: none;
-    padding: 10px;
+    
 }
 
 .co-info {
     float: left;
     padding-left: 0;
+    margin-top: 0;
 }
 
 .site-map {
     float: right;
+    margin-top: 0;
 }
 
 

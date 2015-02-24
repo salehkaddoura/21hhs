@@ -25,45 +25,31 @@
         <!--
         <link rel="canonical" href="http://www.example.com/">
         -->
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/styles/main.css">
     </head>
     <body>
-
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aris-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/"><i class="fa fa-heartbeat fa-lg fa-fw"></i>21HHS</a>
+        
+        <div class="navbar-fixed">
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <a class="brand-logo" href="/"><i class="fa fa-heartbeat fa-lg fa-fw fa-none"></i>21HHS</a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Services</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="number-wrap">
-                            <a class="btn btn-default"><i class="fa fa-phone fa-lg fa-fw"></i>&nbsp;(408) 701 - 7874</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="active" href="/">Home</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Something Here</a></li>
-                                <li><a href="#">Something Here</a></li>
-                                <li><a href="#">Something Here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
         <div class="container-fluid">
             <div class="row">
@@ -72,7 +58,7 @@
                         <h1>21HHS</h1>
                     </div>
                     <p class="lead">The next step in Healthcare</p>
-                    <button class="btn btn-default btn-lg">Get Started</button>
+                    <a class="waves-effect waves-light btn-large">Get Started</a>
                 </div>
             </div>
         </div>
@@ -91,18 +77,24 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container footer-wrap">
-                <ul class="co-info">
-                    <li><i class="fa fa-heartbeat fa-fw"></i>21HHS &copy;</li>
-                    <li>2215 San Francisco California 95403</li>
-                </ul>
-                <ul class="site-map">
-                    <li>Careers</li>
-                    <li>About Us</li>
-                </ul>
-            </div>
-        </footer>
+        
+        <div class="row footer-row">
+            <div class="col s12 footer">
+                <div class="container">
+                    <div class="footer-wrap">
+                        <ul class="co-info">
+                        <li><i class="fa fa-heartbeat fa-fw"></i>21HHS &copy;</li>
+                        <li>2215 San Francisco California 95403</li>
+                    </ul>
+                    <ul class="site-map">
+                        <li>Careers</li>
+                        <li>About Us</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
         <script>
@@ -116,6 +108,8 @@
         
         <!-- Built with love by Saleh Kaddoura -->
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>    
+        <script src="/scripts/materialize.min.js" type="text/javascript"></script>
+        <script src="/scripts/main.js" type="text/javascript"></script>
+  
     </body>
 </html>

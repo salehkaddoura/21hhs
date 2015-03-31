@@ -75,70 +75,108 @@
         <div class="container form-container">
             <div class="row">
                 <form class="col s12" action="#">
-                    <div class="row client-type-wrap">
+                    <div class="row emp-type-wrap">
                         <p>I am a:</p>
-                        <p class="client-type">
-                            <input type="checkbox" id="friend">
-                            <label for="friend">Relative/Friend</label>
-                        </p>
-                        <p class="client-type">
-                            <input type="checkbox" id="doctor">
-                            <label for="doctor">Doctor/Nurse</label>
-                        </p>
-                        <p class="client-type">
-                            <input type="checkbox" id="patient">
-                            <label for="patient">Patient</label>
-                        </p>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="rn">
+                                <label for="rn">Registerned Nurse</label>
+                            </p>        
+                        </div>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="lvn">
+                                <label for="lvn">Licensed Vocational Nurse</label>
+                            </p>    
+                        </div>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="phys-ther">
+                                <label for="phys-ther">Physical Therapist</label>
+                            </p>    
+                        </div>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="lang-path">
+                                <label for="lang-path">Speech Language Pathalogist</label>
+                            </p>    
+                        </div>
+                    </div>
+                    <div class="row emp-type-wrap">
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="hhome-aide">
+                                <label for="hhome-aide">Home Health Aide</label>
+                            </p>
+                        </div>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="occup-thera">
+                                <label for="occup-thera">Occupation Therapists</label>
+                            </p>    
+                        </div>
+                        <div class="col s3">
+                            <p class="emp-type">
+                                <input name="group1" type="radio" id="med-soc-worker">
+                                <label for="med-soc-worker">Medical Social Worker</label>
+                            </p>    
+                        </div>
+                        <div class="input-field col s3">
+                            <input id="other-occup" type="text">
+                            <label for="other-occup">Other</label>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
-                            <input id="full-name" type="text" class="validate">
-                            <label for="full-name">Full Name (Required)</label>
-                        </div>
                         <div class="input-field col s6">
                             <input id="email" type="email" class="validate">
                             <label for="email">Email (Required)</label>
                         </div>
+                        <div class="input-field col s6">
+                            <input id="full-emp-name" type="text" class="validate">
+                            <label for="full-emp-name">Full Name (Required)</label>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="telephone" type="tel">
-                            <label for="telephone">Telephone</label>
+                            <input id="telephone" type="tel" class="validate">
+                            <label for="telephone">Telephone (Required)</label>
                         </div>
-                        <div class="input-field col s6">
-                            <input id="zip-code" type="text">
-                            <label for="input-box">Zip Code</label>
+                    </div>
+                    <div class="row job-type-wrapper">
+                        <div class="col s3">
+                            <p class="job-type">
+                                <input name="group2" type="radio" id="full-time">
+                                <label for="full-time">Full Time</label>
+                            </p>        
+                        </div>
+                        <div class="col s3">
+                            <p class="job-type">
+                                <input name="group2" type="radio" id="part-time">
+                                <label for="Part-time">Part Time</label>
+                            </p>        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="file-field input-field col s6">
+                                    <input type="text" class="file-path validate"></input>
+                                    <div class="btn">
+                                        <span>File</span>
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <textarea id="input-box" class="materialize-textarea"></textarea>
-                                    <label for="icon_prefix2">Reason for referral...</label>
+                                    <textarea id="resumearea1" class="materialize-textarea"></textarea>
+                                    <label for="resumearea1">Resume...</label>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="prim-doc-name" type="text">
-                            <label for="prim-doc-name">Primary Doctors Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="prim-doc-num" type="tel">
-                            <label for="prim-doc-num">Primary Doctors Number</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="medicare-num" type="text">
-                            <label for="medicare-num">Medicare Number</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <a class="waves-effect waves-light btn-large">Submit</a>
                         </div>
                     </div>
                 </form>

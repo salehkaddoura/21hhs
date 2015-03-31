@@ -72,7 +72,6 @@ body {
     .brand-logo {
         color: #304A72;
         font-family: 'Cabin';
-        // font-size: 24px;
         text-transform: uppercase;
     }
 
@@ -81,20 +80,23 @@ body {
     }
 }
 
-// ul.nav li.dropdown:hover > ul.dropdown-menu {
-//     display: block;    
-// }
+.mdi-navigation-menu {
+    color: $font-color;
+}
+
 
 .dropdown-content {
     font-family: 'Raleway';
-    // font-size: 14px;
     text-transform: uppercase;
     color: #304A72;
-}
+    min-width: 200px;
+    max-height: 90%;
 
-// .dropdown-menu li {
-//     padding: 2px 0;
-// }
+    li {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
 
 .number-wrap {
     margin: 8px 15px;
@@ -136,7 +138,7 @@ body {
 }
 
 .header-wrap {
-    background: url('/images/highrise.jpg') no-repeat center center fixed;
+    background: url('/images/unnamed.jpg') no-repeat center center fixed;
     width: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -239,13 +241,43 @@ body {
 .site-map {
     float: right;
     margin-top: 0;
+
+    li a {
+        color: $font-color;
+    }
 }
 
 
 // CONTACT -------------------------------------
 
 .form-container {
-    margin-top: 5%;
+    margin-top: 3%;
 }
+
+.client-type-wrap {
+
+    p {
+        font-family: 'Raleway';
+        font-family: 500;
+        font-size: 20px;
+    }
+
+    .client-type {
+        display: inline-block;
+        margin-left: 2%;        
+    }
+}
+
+.emp-type-wrap,
+.job-type {
+    
+    p {
+        font-family: 'Raleway';
+        font-family: 500;
+        font-size: 20px;
+    }    
+}
+
+
 
 

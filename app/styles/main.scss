@@ -57,8 +57,22 @@ $font-color: #41658A;
 
 
 
-body {
-    // padding-top: 70px;
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.bg-image {
+    position: fixed;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+    background: url('/images/unnamed.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: opacity(70%); 
 }
 
 .fa-none {
@@ -70,6 +84,7 @@ body {
     border-color: $clouds;
 
     .brand-logo {
+        position: relative;
         color: #304A72;
         font-family: 'Cabin';
         text-transform: uppercase;
@@ -84,6 +99,10 @@ body {
     color: $font-color;
 }
 
+.phone {
+    margin-left: 5%;
+    font-size: 1.9rem;
+}
 
 .dropdown-content {
     font-family: 'Raleway';
@@ -137,16 +156,20 @@ body {
     color: #34495e;
 }
 
+.container-fluid {
+
+}
+.hh-row {
+    display: table;
+}
+
 .header-wrap {
-    background: url('/images/unnamed.jpg') no-repeat center center fixed;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     height: 500px;
     padding: 4% 0;
     text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
 
     button {
         margin: 0 auto;
@@ -183,30 +206,75 @@ body {
     font-weight: 500;
 }
 
-.content-wrap {
+.row .col.content-wrap {
+    background: rgba(48, 74, 114, 0.4);
+    border-radius: 4px;
+    width: 72%;
+
     h4 {
         font-family: 'Raleway';
         font-weight: 300;
         text-transform: uppercase;
         font-size: 24px;
         margin-top: 10px;
+        color: #FFF;
     }
 
     p {
-        font-family: 'Raleway';
-        font-family: 400;
+        font-family: 'Cabin';
+        font-weight: 400;
         letter-spacing: 1px;
+        color: #FFF;
     }
 }
 
+.row .col.form-wrap {
+    background: rgba(48, 74, 114, 0.4);
+    border-radius: 4px;
+    margin-left: 28px;
+    // padding: 0.19rem 0.75rem;
+}
+
+.row .col.form-input {
+    float: none;
+    width: 100%;
+}
+
+.form-input {
+    label {
+        color: #FFF;    
+    }
+    
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea {
+        border-bottom: 1px solid #FFF;
+    }   
+}
+
+input[type=submit] {
+    color: $white;
+    background-color: #16a085;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
 
 .footer-row {
     margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: 5%;
 }
 
 .footer {
     border-top: 1px solid $clouds;
-    margin-top: 5%;
 }
 
 .footer-wrap {
@@ -232,6 +300,22 @@ body {
     
 }
 
+.social-wrap {
+    margin-top: 0;
+    margin-left: 5%;
+    float: left;
+}
+
+.hh-icon {
+    display: inline-block;
+}
+
+.hh-icon:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale (1.2);
+    -moz-transform: scale(1.2);
+}
+
 .co-info {
     float: left;
     padding-left: 0;
@@ -246,7 +330,14 @@ body {
         color: $font-color;
     }
 }
+// service pages
+.service h1 {
+    font-size: 50px;
+}
 
+.service-container {
+    margin-top: 5%;
+}
 
 // CONTACT -------------------------------------
 
@@ -258,7 +349,7 @@ body {
 
     p {
         font-family: 'Raleway';
-        font-family: 500;
+        font-weight: 500;
         font-size: 20px;
     }
 
@@ -278,6 +369,150 @@ body {
     }    
 }
 
+
+/* All Smartphones in portrait and landscape ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+
+    nav .brand-logo {
+        width: auto;
+    }
+
+    .nav-wrapper .brand-logo {
+        font-size: 1.8rem;
+        margin-left: 12%;
+    }
+
+    .fa-heartbeat {
+        font-size: 1.8rem;
+    }
+
+    .brand-logo.phone {
+        display: none;
+    }
+
+    .page-header h1 {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .lead {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+
+    .row .col.content-wrap {
+        width: 100%;
+    }
+
+    .row .col.form-wrap {
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    .row .col.content-wrap h4 {
+        font-size: 18px;
+    }
+
+    .footer .container {
+        padding: 0;
+    }
+
+    .footer-wrap ul li {
+        float: none;
+    }
+
+    .co-info,
+    .social-wrap,
+    .site-map {
+        display: block;
+        text-align: center;
+        margin-left: 0;
+        float: none;
+    }
+
+    .co-info li,
+    .f-hb {
+        font-size: 1rem;
+    }
+
+    .co-info li:last-child {
+        padding: 5px;
+    }
+
+    .social-wrap li,
+    .site-map li {
+        display: inline-block;
+    }
+
+    // contact page ---------------------------------------------
+
+    .client-type-wrap .client-type {
+        font-weight: 500;
+        display: block;
+    }
+
+    // services ----------------------------------
+    .service {
+        width: auto;
+        margin-top: 0;
+
+        h1 {
+            font-size: 48px;     
+        }
+        
+    }
+
+}
+
+@media only screen and (min-width: 1224px) and (max-width: 1440px) {
+
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    
+    nav .brand-logo {
+        font-size: 1.3rem;
+    }
+
+    nav .nav-wrapper i {
+        font-size: 1.3rem;
+    }
+
+    .phone {
+        margin-left: 3%;
+    }
+
+    .row .col.content-wrap {
+        width: 70%;
+    }
+
+    .row .col.form-wrap {
+        width: 28%;
+        margin-left: 13px;
+    }
+}
+
+@media only screen and (max-device-width: 992px) {
+
+    nav .brand-logo {
+        width: auto;
+    }
+
+    .nav-wrapper .phone {
+        display: none;
+    }
+
+    .nav-wrapper .brand-logo {
+        margin-left: 5%;
+    }
+
+    .row .col.form-wrap {
+        margin-left: 20px;
+    }
+}
 
 
 

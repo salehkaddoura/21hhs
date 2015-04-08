@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,300);
 @import url(https://fonts.googleapis.com/css?family=Cabin:400,500);
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
 @charset "UTF-8";
 
 // Mixins
@@ -39,6 +42,9 @@
 @import "components/date_picker/default.date.scss";
 @import "components/date_picker/default.time.scss";
 
+// slick
+
+
 
 @font-face {
     font-family: "Material-Design-Icons";
@@ -54,7 +60,8 @@
 $white: #FFF;
 $clouds: #ecf0f1;
 $font-color: #41658A;
-
+$light-green: #97d5a4;
+$dark-green: #16a085;
 
 
 html, body {
@@ -62,18 +69,135 @@ html, body {
     width: 100%;
 }
 
-// .bg-image {
-//     position: fixed;
-//     z-index: -10;
-//     height: 100%;
-//     width: 100%;
-//     background: url('/images/unnamed.jpg') no-repeat center center fixed;
-//     -webkit-background-size: cover;
-//     -moz-background-size: cover;
-//     -o-background-size: cover;
-//     background-size: cover;
-//     filter: opacity(70%); 
-// }
+nav {
+    height: 155px;
+    background-color: #FFF;
+
+    ul {
+        width: 51%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    ul a {
+        color: $font-color;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
+
+.hhs-header-container {
+    width: 100%;
+
+    .row {
+        margin-bottom: 0;
+    }
+}
+
+nav .nav-wrapper {
+    overflow: hidden;
+    margin-top: -1%;
+    background-color: transparent;
+}
+.logo-wrapper {
+
+    p, h1 {
+        margin: 0;
+        color: $font-color;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 30px;
+        margin-top: -2%;
+        margin-left: 15%;
+    }
+}
+
+.hhs-slider {
+    margin-top: 1%;
+}
+
+.slick-track{
+    text-align: center;
+}
+
+.slick-slide img {
+    margin: 0 auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: $font-color;
+}
+
+.img1 {
+    background: url('/images/unnamed.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.img2 {
+    background: url('/images/unnamed1.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.img3 {
+    background: url('/images/unnamed2.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.fa-none {
+    vertical-align: -10%;
+}
+
+.service-areas,
+.services {
+    width: 48%;
+    float: left;
+}
+
+.services {
+    margin-left: 4%;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px)  { 
+
+    nav {
+        height: 156px;
+    }
+
+    .logo-wrapper {
+        h1 {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 26px;
+            margin-top: -3%;
+            margin-left: 20%;
+        }
+    }
+
+    nav ul {
+        width: 69%;
+    }
+}
 
 .header-container {
     background: url('/images/unnamed.jpg') no-repeat center center fixed;
@@ -83,9 +207,7 @@ html, body {
     background-size: cover;
 }
 
-.fa-none {
-    vertical-align: initial;
-}
+
 
 .nav-wrapper {
     background-color: $white;
@@ -247,18 +369,18 @@ html, body {
     width: 100%;
 }
 
-.form-input {
-    label {
-        color: #FFF;    
-    }
+// .form-input {
+//     label {
+//         color: #FFF;    
+//     }
     
-    input[type=text],
-    input[type=email],
-    input[type=tel],
-    textarea {
-        border-bottom: 1px solid #FFF;
-    }   
-}
+//     input[type=text],
+//     input[type=email],
+//     input[type=tel],
+//     textarea {
+//         border-bottom: 1px solid #FFF;
+//     }   
+// }
 
 input[type=submit] {
     color: $white;
@@ -269,9 +391,9 @@ input[type=submit] {
     text-transform: uppercase;
 }
 
-.form-row {
-    margin-bottom: 12px;
-}
+// .form-row {
+//     margin-bottom: 12px;
+// }
 
 .footer-row {
     margin-bottom: 0;

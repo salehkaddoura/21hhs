@@ -79,11 +79,13 @@ html, body {
 }
 
 nav {
-    height: 155px;
+    height: 160px;
     background-color: #FFF;
+    line-height: 25px;
 
     ul {
-        width: 51%;
+        width: 48%;
+        height: 52px;
         overflow: hidden;
         margin: 0 auto;
         padding: 0 10px;
@@ -91,8 +93,12 @@ nav {
 
     ul a {
         color: $font-color;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-transform: uppercase;
+    }
+
+    ul li {
+        padding: 13px 0;
     }
 }
 
@@ -106,10 +112,11 @@ nav {
 
 nav .nav-wrapper {
     overflow: hidden;
-    margin-top: -1%;
     background-color: transparent;
 }
+
 .logo-wrapper {
+    text-align: center;
 
     p, h1 {
         margin: 0;
@@ -117,18 +124,22 @@ nav .nav-wrapper {
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     p {
-        font-size: 30px;
-        margin-top: -2%;
-        margin-left: 15%;
+        font-size: 24px;
+        margin-top: -1%;
     }
 }
 
+.logo-wrapper p:last-child {
+    font-size: 18px;
+    margin: 0;
+}
+
 .hhs-slider {
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .slick-track{
@@ -171,18 +182,48 @@ nav .nav-wrapper {
     height: 300px;
 }
 
+.card.small {
+    height: 260px;
+
+    .card-content {
+        height: 175px;
+    }
+}
+
+.card .card-title {
+    font-size: 20px;
+    color: #FFF;
+}
+
 .fa-none {
     vertical-align: -10%;
 }
 
 .service-areas,
 .services {
-    width: 48%;
+    width: 100%;
     float: left;
 }
 
-.services {
-    margin-left: 4%;
+.hhs-contact-form {
+    border: 1px solid $clouds;
+    background: #bdc3c7;
+}
+
+.input-field label {
+    color: #FFF;
+}
+
+input[type=text], 
+input[type=password], 
+input[type=email], 
+input[type=url], 
+input[type=date], 
+input[type=tel], 
+input[type=number], 
+input[type=search], 
+textarea.materialize-textarea {
+    border-bottom: 1px solid #FFF;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px)  { 

@@ -9,17 +9,9 @@
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="">
-
-        <!-- Add to homescreen for Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="21HHS">
-        <link rel="apple-touch-icon" href="">
-
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="">
-        <meta name="msapplication-TileColor" content="">
 
         <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
         <!--
@@ -31,11 +23,12 @@
     <body>
 
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Physical Therapy</a></li>
-        <li><a href="#!">Occupational Therapy</a></li>
-        <li><a href="#!">Speech Therapy</a></li>
-        <li><a href="#!">Home Health Aide</a></li>
-        <li><a href="#!">Medicare Social Services</a></li>
+        <li><a href="/pt">Physical Therapy</a></li>
+        <li><a href="/ot">Occupational Therapy</a></li>
+        <li><a href="/st">Speech Therapy</a></li>
+        <li><a href="/hha">Home Health Aide</a></li>
+        <li><a href="/mss">Medicare Social Work</a></li>
+        <li><a href="/nursing">Skilled Nursing</a></li>
     </ul>
     <div class="container hhs-site-container">
         <nav>
@@ -54,12 +47,21 @@
                                 <li><a href="/contact">Contact</a></li>
                                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Services</a></li>
                                 <li><a href="/contact">About Us</a></li>
+                                <li><a href="/why">Why Choose Us?</a></li>
+                                <li><a href="/compare">Compare Us</a></li>
+                                <li><a href="/resources">Resources</a></li>
+                                <li><a href="/faq">F.A.Q.s</a></li>
+                                <li><a href="/contact">Contact Us`</a></li>
                             </ul>
                             <ul class="side-nav" id="hh-sidenav">
                                 <li><a href="/">Home</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/about">About Us</a></li>
                                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Services</a></li>
-                                <li><a href="/contact">About Us</a></li>
+                                <li><a href="/why">Why Choose Us?</a></li>
+                                <li><a href="/compare">Compare Us</a></li>
+                                <li><a href="/resources">Resources</a></li>
+                                <li><a href="/faq">F.A.Q.s</a></li>
+                                <li><a href="/contact">Contact Us`</a></li>
                             </ul>
                         </div>    
                     </div>
@@ -68,114 +70,117 @@
         </nav>
 
         <div class="row">
-            <div class="col s12 hhs-slider">
+            <div class="col s12 hhs-header">
                 <div class="img1"></div>
-                <div class="img2"></div>
-                <div class="img3"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s12 m4">
-                <div style="height: 213px" class="card small">
-                    <div class="card-image">
-                        <img src="/images/unnamed1.jpg">
-                        <span class="card-title">Whenever possible, we visit the client family to make them feel comfortable with us as a referral agency.</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Why Choose Us?</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div style="height: 213px" class="card small">
-                    <div class="card-image">
-                        <img src="/images/unnamed1.jpg">
-                        <span class="card-title">There are a lot of new companies entering the marketplace, many of which have little experience.</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Compare Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4">
-                <div style="height: 213px" class="card small">
-                    <div class="card-image">
-                        <img src="/images/unnamed1.jpg">
-                        <span class="card-title">Home Sweet Home Cares staff are nurse's aides CNA's, HHA's, companions and homemakers.</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">Our Services</a>
-                    </div>
+                <div class="header-content">
+                    <p>Dependable Elder Care in the San Francisco Bay Area</p>
+                    <p>21st Century Health Home Services mission is to provide patient centered home health care, improving the quality life for our members and their families, more effectively than anyone else.</p>
+                    <a href="/contact" class="waves-effect waves-light btn-large">Learn More</a>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col s12 m9">
+            <div class="col s12 m4">
+                <div class="card small info teal lighten-1 z-depth-3">
+                    <div class="card-image">
+                        <span class="card-title info-title">Whenever possible, we visit the client family to make them feel comfortable with us as a referral agency.</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="/why">Why Choose Us?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card small info green darken-1 z-depth-3">
+                    <div class="card-image">
+                        <span class="card-title info-title">There are a lot of new companies entering the marketplace, many of which have little experience.</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="/compare">Compare Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card small info green darken-1 z-depth-3">
+                    <div class="card-image">
+                        <span class="card-title info-title">Home Sweet Home Cares staff are nurse's aides CNA's, HHA's, companions and homemakers.</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#services">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m9 home-content">
                 <h4>Welcome to 21st Century Home Health Services</h4>
-                <p>Looking for a reputable and dependable agency for home care aide services in the SF Bay area? With over two decades of experience helping seniors and adults living with all kinds of chronic and disabling conditions, Home Sweet Home Care knows how to deliver the in-home support help that people need when they need it most. Our carefully-screened caregivers are available on a part-time, full-time, hourly, shift care, or live-in basis, to assist our clients with personal hygiene, light housework, meal preparation, medication reminders, exercise assistance, errands and help with activities of daily living, allowing them to live at home worry-free.</p>
+                <p>21st Century Home Health Services Inc strives to become the leading provider for both Medical and Non-Medical assistance for elders in San Francisco and the Peninsula. We provide skilled nursing, physical therapy, home health aide, occupational therapy, speech therapy and medical social work. Our mission as elderly care providers is to help your loved one live safely and comfortably at home. At 21st Century Home Health Services Inc, we will work closely with your family to establish an individualized, custom care plan based on each of our members needs. By providing essential services to aging, recovering, disabled, chronically, or terminally ill individuals who want to stay in the comfort of their own home, but need medical attention and/or assistance with personal activities of daily living.</p> 
+                <p>Finding a reliable and trustworthy provider to care for a loved one can be a very difficult choice for a family to make. Patient-centered care is the core principle of what we at 21st Century Home Health Care Services operate by, which means that we care about our members as much as we care for them. Our staff members are experienced and qualified professionals who are passionate about making a difference in our member’s lives. Compassion is a powerful facilitator for seniors when it comes to healing. Such relationships promote longer, healthier lives. We are committed to empowering all of our members with the environment necessary to receive effective treatments by allowing for greater transparency and educating the member and their family throughout the process. This type of collaboration and participation by everyone affected will help create a higher quality type of care that your loved one deserves. Allow our compassionate and skilled staff team members to take care of your loved one.</p>
+                <p>How to get started?</p>
+                <p>Please <a href="/contact">Contact Us</a> today to if you have any questions or to schedule a free, in-home consultation.</p>
                 <div class="row">
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Skilled Nursing Services</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class="services-title card-title">Skilled Nursing Services</span>
+                                <p>21st Century Home Health Services team of highly skilled nurses and therapists are available to provide the skilled medical care you or your loved one needs.</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Learn More</a>
+                                <a href="/nursing">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Physical Therapy</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class="services-title card-title">Physical Therapy</span>
+                                <p>Whether it was an accident or a result of injury or disease, the role of a physical therapist is to help our members return to maximal function</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Learn More</a>
+                                <a href="/pt">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Speech Therapy</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class="services-title card-title">Speech Therapy</span>
+                                <p>Help our members get back proper speech, reading, writing and other communication methods</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Learn More</a>
+                                <a href="/st">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Occupational Therapy</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class="services-title card-title">Occupational Therapy</span>
+                                <p>We work on educating the patient and the family about how our Occupational Therapy can help re-build lost skills and restore lost confidence</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Learn More</a>
+                                <a href="/ot">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Home Health Aides</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class=" services-title card-title">Home Health Aides</span>
+                                <p>We provide efficient and quality assistance in daily routines for adults and seniors including self-care and basic household services</p>
                             </div>
                             <div class="card-action">
-                                <a href="#">Learn More</a>
+                                <a href="/hha">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col m4">
                         <div class="card small blue-grey darken-1">
                             <div class="card-content white-text">
-                                <span class="card-title">Medical Social Work</span>
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                <span class="services-title card-title">Medical Social Work</span>
+                                <p>Illness, disability and life-limiting conditions can have a deep impact beyond an individual's physical health. Our medical social workers help assess the social and emotional factors affecting our members and family and respond with counseling or referral to close resources.</p>
                             </div>
                             <div class="card-action">
                                 <a href="#">Learn More</a>
@@ -185,7 +190,7 @@
                 </div>
             </div>
             <div class="col s12 m3">
-                <form class="col s12 hhs-contact-form" action="mailto:saleh.kaddoura@gmail.com" method="POST" enctype="text/plain">
+                <form class="col s12 hhs-contact-form z-depth-2" action="mailto:saleh.kaddoura@gmail.com" method="POST" enctype="text/plain">
                     <div class="row form-row">
                         <div class="input-field col s6 form-input">
                             <input id="full-name" type="text" name="Full Name" class="validate">
@@ -216,11 +221,11 @@
                             </div>
                         </div>
                     </div>
-                    <div  class="row form-row">
+                     <div  class="row form-row">
                         <div class="col s12">
-                            <input class="waves-effect waves-light btn" type="submit" name="Submit">
+                            <a class="waves-effect waves-light btn">Submit</a>
                         </div>
-                    </div>  
+                    </div>    
                 </form>
                 <div class="service-areas">
                     <ul class="">
@@ -231,38 +236,30 @@
                         <li><div>San Mateo<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
                     </ul>
                 </div>
+                <div class="map-container">
+                    <iframe width="263" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=530%20East%203rd%20Avenue%2C%20San%20Mateo%2C%20CA%2C%20United%20States&key=AIzaSyA_LpfnNHQ422uiNtF6rqIZk4ygFH01q1M"></iframe>
+                </div>
             </div>
         </div>
     </div>
-        
-    <!-- 
-                <div class="services">
-                    <ul class="collection with-header">
-                        <li class="collection-header"><h5>Our Services</h5></li>
-                        <li class="collection-item"><div>Physical Therapy<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
-                        <li class="collection-item"><div>Occupational Therapy<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
-                        <li class="collection-item"><div>Speech Therapy<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
-                        <li class="collection-item"><div>Home Health Aide<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
-                        <li class="collection-item"><div>Medicare Social Services<a href="#!" class="secondary-content"><i class="fa fa-caret-right"></i></a></div></li>
-                    </ul>
-                </div> -->
+    
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-XXXXX-X', 'auto');
-          ga('send', 'pageview');
-        </script>
-        
-        <!-- Built with love by Saleh Kaddoura -->
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="/scripts/slick.min.js"></script>
-        <script src="/scripts/materialize.min.js" type="text/javascript"></script>
-        <script src="/scripts/main.js" type="text/javascript"></script>
-  
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <!-- Built with love by Saleh Kaddoura -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/scripts/slick.min.js"></script>
+    <script src="/scripts/materialize.min.js" type="text/javascript"></script>
+    <script src="/scripts/main.js" type="text/javascript"></script>
+
     </body>
 </html>

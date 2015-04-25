@@ -71,6 +71,8 @@ $clouds: #ecf0f1;
 $font-color: #41658A;
 $light-green: #97d5a4;
 $dark-green: #16a085;
+$robotfs: 'Roboto', 'Helvitica', 'Verdana';
+$openfs: 'Open Sans', 'Helvitica', 'Verdana'; 
 
 
 html, body {
@@ -84,7 +86,7 @@ nav {
     line-height: 25px;
 
     ul {
-        width: 48%;
+        width: 93%;
         height: 52px;
         overflow: hidden;
         margin: 0 auto;
@@ -95,6 +97,8 @@ nav {
         color: $font-color;
         font-size: 1.4rem;
         text-transform: uppercase;
+        font-family: $robotfs;
+        font-weight: 400;
     }
 
     ul li {
@@ -125,6 +129,9 @@ nav .nav-wrapper {
 
     h1 {
         font-size: 27px;
+        font-family: $robotfs;
+        font-weight: 500;
+
     }
 
     p {
@@ -138,21 +145,47 @@ nav .nav-wrapper {
     margin: 0;
 }
 
-.hhs-slider {
-    margin-top: 2%;
+//=============== HOME ==============
+.hhs-header {
+    margin-top: 1.6667%;
+    position: relative;
 }
 
-.slick-track{
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 5px;
     text-align: center;
+
+    p {
+        color: $font-color;
+        text-align: center;
+    }
+
+    p:nth-child(1) {
+        font-family: $robotfs;
+        font-weight: 500;
+        font-size: 28px;
+    }
+
+    p:nth-child(2) {
+        font-family: $openfs;
+        font-weight: 400;
+        font-size: 24px;
+    }
 }
 
-.slick-slide img {
-    margin: 0 auto;
-}
+.home-content {
+    h4 {
+        font-family: $robotfs;
+        font-weight: 500;
+        color: $font-color;
+    }
 
-.slick-prev:before,
-.slick-next:before {
-    color: $font-color;
+    p {
+        font-family: $openfs;
+        font-weight: 400;
+    }
 }
 
 .img1 {
@@ -162,24 +195,29 @@ nav .nav-wrapper {
     -o-background-size: cover;
     background-size: cover;
     height: 300px;
+    opacity: 0.6;
 }
 
-.img2 {
-    background: url('/images/unnamed1.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 300px;
+.card .card-content {
+    padding: 10px 20px;
 }
 
-.img3 {
-    background: url('/images/unnamed2.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 300px;
+.card .card-content .card-title {
+    line-height: 30px;
+}
+
+.card .services-title {
+    font-family: $openfs;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card .card-image .info-title {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    bottom: initial;
+    font-size: 20px;
 }
 
 .card.small {
@@ -190,9 +228,8 @@ nav .nav-wrapper {
     }
 }
 
-.card .card-title {
-    font-size: 20px;
-    color: #FFF;
+.card.info {
+    height: 213px;
 }
 
 .fa-none {
@@ -206,8 +243,7 @@ nav .nav-wrapper {
 }
 
 .hhs-contact-form {
-    border: 1px solid $clouds;
-    background: #bdc3c7;
+    background: #546e7a;
 }
 
 .input-field label {
@@ -226,63 +262,23 @@ textarea.materialize-textarea {
     border-bottom: 1px solid #FFF;
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1600px)  { 
 
-    nav {
-        height: 156px;
-    }
-
-    .logo-wrapper {
-        h1 {
-            font-size: 28px;
-        }
-
-        p {
-            font-size: 26px;
-            margin-top: -3%;
-            margin-left: 20%;
-        }
-    }
-
-    nav ul {
-        width: 69%;
-    }
-}
-
-.header-container {
-    background: url('/images/unnamed.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+input[type=submit] {
+    color: $white;
+    background-color: #16a085;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 
-
-.nav-wrapper {
-    background-color: $white;
-    border-color: $clouds;
-
-    .brand-logo {
-        position: relative;
-        color: #304A72;
-        font-family: 'Cabin';
-        text-transform: uppercase;
-    }
-
-    .brand-logo:hover {
-        color: #97D5A4;
-    }
-}
 
 .mdi-navigation-menu {
     color: $font-color;
 }
 
-.phone {
-    margin-left: 5%;
-    font-size: 1.9rem;
-}
+
 
 .dropdown-content {
     font-family: 'Raleway';
@@ -295,31 +291,6 @@ textarea.materialize-textarea {
         font-size: 0.8rem;
         text-align: center;
     }
-}
-
-.number-wrap {
-    margin: 8px 15px;
-}
-
-.navbar-nav .number-wrap > a {
-    padding: 8px 12px;
-    font-family: 'Cabin' !important;
-}
-
-.right > li > a {
-    color: #304A72;
-    font-family: 'Raleway';
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.right > li > .active {
-    color: #97D5A4;
-    font-weight: 500;
-}
-
-.right > li > a:hover {
-    color: #97D5A4;
 }
 
 .btn {
@@ -336,82 +307,71 @@ textarea.materialize-textarea {
     color: #34495e;
 }
 
-.container-fluid {
-
-}
-.hh-row {
-    display: table;
-}
-
-.header-wrap {
-    height: 450px;
-    padding: 4% 0;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-
-    button {
-        margin: 0 auto;
-        padding: 16px 26px;
-        font-size: 18px;
-    }
+// ================= SERVCICES ==============
+.row .col.content-wrap {
+    border-radius: 4px;
+    width: 72%; 
 }
 
-.page-header {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 7%;
-
-    h1 {
-        font-family: 'Cabin';
-        color: #304A72;
-        font-weight: 400;
-        font-size: 74px;    
-    }
-    
-}
-
-.lead {
-    font-family: 'Raleway';
-    font-weight: 300;
-    text-align: center;
-    font-size: 21px;
-    color: rgba(48, 74, 114, 1);
-}
-
-.content-header h1 {
-    font-family: 'Cabin';
+.service-header h1 {
+    font-size: 36px;
+    font-family: $robotfs;
     font-weight: 500;
 }
 
-.row .col.content-wrap {
-    // background: rgba(48, 74, 114, 0.4);
-    border-radius: 4px;
-    width: 72%;
+.ot-header h1,
+.st-header h1 {
+    font-size: 28px;
+}
 
-    h4 {
-        font-family: 'Raleway';
-        font-weight: 300;
-        text-transform: uppercase;
-        font-size: 24px;
-        margin-top: 10px;
-        color: rgba(48, 74, 114, 1);
-    }
-
+.service-content {
     p {
-        font-family: 'Cabin';
+        font-family: $openfs;
+        font-size: 18px;
         font-weight: 400;
-        letter-spacing: 1px;
-        color: rgba(48, 74, 114, 1);
     }
 }
 
+.service-container {
+    width: 100%;
+}
+
+.service-list ul {
+    list-style-type: initial;
+}
+
+.service-list ul li {
+    list-style-type: initial;
+    font-family:  $openfs;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+//=================== WHY =============
+.why-header {
+    font-size: 28px;
+    font-family: $robotfs;
+    font-weight: 500;
+}
+
+.why-header h1 {
+    font-size: 32px;
+    font-family: $robotfs;
+    font-weight: 500;
+}
+
+.why-body {
+    font-family: $openfs;
+    font-weight: 400;
+    font-family: 14px;
+}
+
+//=================== FORM =============
 .row .col.form-wrap {
     background: rgba(48, 74, 114, 0.4);
     border-radius: 4px;
     margin-left: 28px;
-    // padding: 0.19rem 0.75rem;
+    margin-top: 5%;
 }
 
 .row .col.form-input {
@@ -419,32 +379,8 @@ textarea.materialize-textarea {
     width: 100%;
 }
 
-// .form-input {
-//     label {
-//         color: #FFF;    
-//     }
-    
-//     input[type=text],
-//     input[type=email],
-//     input[type=tel],
-//     textarea {
-//         border-bottom: 1px solid #FFF;
-//     }   
-// }
 
-input[type=submit] {
-    color: $white;
-    background-color: #16a085;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-// .form-row {
-//     margin-bottom: 12px;
-// }
-
+//========== FOOTER ==========
 .footer-row {
     margin-bottom: 0;
     position: absolute;
@@ -509,14 +445,7 @@ input[type=submit] {
         color: $font-color;
     }
 }
-// service pages
-.service h1 {
-    font-size: 50px;
-}
 
-.service-container {
-    margin-top: 5%;
-}
 
 // CONTACT -------------------------------------
 

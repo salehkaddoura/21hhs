@@ -32,9 +32,33 @@ app.get('/contact', function(req, res) {
     res.render('contact');
 });
 
-app.get('/careers', function(req, res) {
-    res.render('careers');
+app.get('/pt', function(req, res) {
+    res.render('pt');
 });
+
+app.get('/ot', function(req, res) {
+    res.render('ot');
+});
+
+app.get('/st', function(req, res) {
+    res.render('st');
+});
+
+app.get('/hha', function(req, res) {
+    res.render('hha');
+});
+
+app.get('/mss', function(req, res) {
+    res.render('mss');
+});
+
+app.get('/nursing', function(req, res) {
+    res.render('nursing');
+});
+
+app.get('/why', function(req, res) {
+    res.render('why');
+})
 
 app.post('/contacthhs', function(req, res) {
     console.log(req.body);

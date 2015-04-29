@@ -128,15 +128,15 @@ html, body {
 }
 
 nav {
-    height: 160px;
+    height: 115px;
     background-color: #FFF;
     line-height: 25px;
 
     ul {
-        width: 100%;
-        height: 52px;
+        // width: 100%;
+        // height: 52px;
+        margin: 20px 0;
         overflow: hidden;
-        margin: 0 auto;
         padding: 0;
     }
 
@@ -146,10 +146,11 @@ nav {
         text-transform: uppercase;
         font-family: $robotfs;
         font-weight: 400;
+        padding: 0 22px;
     }
 
     ul li {
-        padding: 13px 0;
+        padding: 28px 0;
     }
 }
 
@@ -161,38 +162,31 @@ nav {
     }
 }
 
-nav .nav-wrapper {
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.logo-wrapper {
+nav .brand-logo {
     text-align: center;
-
-    p, h1 {
-        margin: 0;
-        color: $font-color;
-    }
-
-    h1 {
-        font-size: 27px;
-        font-family: $robotfs;
-        font-weight: 500;
-
-    }
-
-    p {
-        font-size: 24px;
-        margin-top: -1%;
-    }
+    color: $font-color;
+    font-size: 1.5rem;
+    font-family: $openfs;
+    font-weight: 700;
 }
 
-.logo-wrapper p:last-child {
-    font-size: 18px;
+nav .brand-logo p {
+    margin: -3% 0 0 0;
+    font-weight: 400;
+}
+
+nav .brand-logo p:last-child {
     margin: 0;
 }
 
+
 //=============== HOME ==============
+.hhs-site-container,
+.service-container,
+.contact-container {
+    margin-top: 3%;
+}
+
 .hhs-header {
     margin-top: 1.6667%;
     position: relative;
@@ -232,6 +226,7 @@ nav .nav-wrapper {
     p {
         font-family: $openfs;
         font-weight: 400;
+        color: $font-color;
     }
 }
 
@@ -254,21 +249,40 @@ nav .nav-wrapper {
 }
 
 .quote-container {
-    background-color: #4258a0;
+    background-color: #FFF;
     width: 100%;
     overflow: hidden;
-    height: 100px;
+    // height: 100px;
 
-    p {
-        color: #FFF;
-        text-align: center;
+    .quote-header {
+        font-size: 22px;
+        text-align: left;
+        margin: 0;
+        font-family: $openfs;
+        font-weight: 400;
+        color: $font-color;
+        padding-bottom: 5px;
     }
+
+    hr {
+        margin: 0;
+    }
+}
+
+.quote-source {
+    text-align: right;
+    font-weight: 300;
 }
 
 .quote-container > .q-wrap > .quote {
     width: 25%;
     float: left;
     height: auto;
+    color: $font-color;
+    text-align: center;
+    font-family: $openfs;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .q-wrap {
@@ -277,7 +291,7 @@ nav .nav-wrapper {
     margin: 0;
     left: 0;
     text-align: left;
-    animation: 10s slidy infinite;
+    animation: 15s slidy infinite;
 }
 
 .card .card-content {
@@ -292,6 +306,7 @@ nav .nav-wrapper {
     font-family: $openfs;
     font-weight: 700;
     font-size: 18px;
+    color: $font-color;
 }
 
 .card .card-image .info-title {
@@ -300,6 +315,7 @@ nav .nav-wrapper {
     padding: 20px;
     bottom: initial;
     font-size: 20px;
+    color: $font-color;
 }
 
 .card.small {
@@ -310,18 +326,50 @@ nav .nav-wrapper {
     }
 }
 
+.services-content {
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #FFD6A0));
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: linear-gradient(to top, #FFFFFF 0%, #FFD6A0 100%);
+    color: $font-color;
+}
 .card.info {
     height: 213px;
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FFFFFF), color-stop(1, #FFD6A0));
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #FFD6A0 100%);
+    background-image: linear-gradient(to top, #FFFFFF 0%, #FFD6A0 100%);
 }
 
 .fa-none {
-    vertical-align: -10%;
+    vertical-align: -4%;
 }
 
-.service-areas,
-.services {
+.service-areas {
     width: 100%;
     float: left;
+
+    ul li {
+        h5 {
+            font-family: $robotfs;
+            font-weight: 400;
+            color: $font-color;
+        }
+
+        div {
+            font-family: $robotfs;
+            font-weight: 300;
+            color: $font-color;
+        } 
+    }
+}
+
+.secondary-content {
+    display: none;
 }
 
 .hhs-contact-form {
@@ -429,7 +477,16 @@ input[type=submit] {
     font-size: 16px;
 }
 
+.map-container iframe {
+    width: 100%;
+}
 //================== CONTACT ==========
+
+.hhs-contact-form {
+    // border: 3px solid #FFD6A0;
+    // background-color: transparent;
+    // opacity: 0.4;
+}
 
 .contact-form-container {
     background-color: #546e7a;
@@ -542,7 +599,7 @@ input[type=submit] {
 // CONTACT -------------------------------------
 
 .form-container {
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
 .client-type-wrap {

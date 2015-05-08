@@ -65,16 +65,20 @@ app.post('/contacthhs', function(req, res) {
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'saleh.kaddoura@gmail.com',
-            pass: 'smileyrilec93'
+            user: '21centuryhhs@gmail.com',
+            pass: 'phone123'
         }
     });
 
     var mailOptions = {
-        from: req.body.fullname + ' ' + req.body.email,
-        to: 'saleh.kaddoura@gmail.com',
+        from: req.body.email,
+        to: 'contact@21hhs.com',
         subject: 'New Customer',
-        text: req.body.message
+        text: 'Name: ' + req.body.fullname + '\n' +
+             'Email: ' + req.body.email + '\n' +
+             'Telephone: ' + req.body.telephone + '\n' +
+             'Zipcode: ' + req.body.zipcode + '\n' +
+             'Message: ' + req.body.message 
     }
 
     transporter.sendMail(mailOptions, function(error, info) {
@@ -82,6 +86,7 @@ app.post('/contacthhs', function(req, res) {
             console.log(error);
         } else {
             console.log('Message sent: ', info.response);
+            res.status(200).send('<p>Success!</p>');
         }
     });
 })

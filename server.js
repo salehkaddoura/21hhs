@@ -48,16 +48,16 @@ app.get('/hha', function(req, res) {
     res.render('hha');
 });
 
-app.get('/mss', function(req, res) {
-    res.render('mss');
+app.get('/msw', function(req, res) {
+    res.render('msw');
 });
 
 app.get('/nursing', function(req, res) {
     res.render('nursing');
 });
 
-app.get('/why', function(req, res) {
-    res.render('why');
+app.get('/about', function(req, res) {
+    res.render('about');
 })
 
 app.post('/contacthhs', function(req, res) {

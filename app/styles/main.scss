@@ -74,6 +74,7 @@ $dark-green: #16a085;
 $robotfs: 'Roboto', 'Helvitica', 'Verdana';
 $openfs: 'Open Sans', 'Helvitica', 'Verdana'; 
 
+// ============= GENERAL CSS ===========================================
 @-webkit-keyframes slidy {
     0% { left: 0%; }
     20% { left: 0%; }
@@ -127,16 +128,16 @@ html, body {
     width: 100%;
 }
 
+.fa-none {
+    vertical-align: -4%;
+}
+
 nav {
-    // height: 115px;
     background-color: #FFF;
     line-height: 25px;
     border-top: 4px solid #41658A;
 
     ul {
-        // width: 100%;
-        // height: 52px;
-        // margin: 20px 0;
         overflow: hidden;
         padding: 0;
     }
@@ -151,17 +152,10 @@ nav {
     }
 
     ul li {
-        padding: 20px 0;
+        padding: 18px 0;
     }
 }
 
-.hhs-header-container {
-    width: 100%;
-
-    .row {
-        margin-bottom: 0;
-    }
-}
 
 nav .brand-logo {
     text-align: center;
@@ -171,24 +165,61 @@ nav .brand-logo {
     font-weight: 700;
 }
 
-nav .brand-logo p {
-    margin: -3% 0 0 0;
-    font-weight: 400;
+.site-wrapper {
+    position: relative; 
+    width: 100%; 
+    min-height: 100%
 }
 
-nav .brand-logo p:last-child {
-    margin: 0;
-}
-
-
-
-
-//=============== HOME ==============
 .hhs-site-container,
 .service-container,
 .contact-container {
-    // margin-top: 3%;
+    position: relative;
 }
+
+hr {
+    border-color: #bdc3c7;
+    border-style: solid;
+    margin: 0;
+}
+
+.mdi-navigation-menu {
+    color: $font-color;
+}
+
+.dropdown-content {
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    color: #304A72;
+    min-width: 200px;
+    max-height: 90%;
+
+    li {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    li a {
+        color: #7f8c8d;
+    }
+}
+
+.btn {
+    color: $white;
+    background-color: #16a085;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn-default:hover {
+    background-color: #97D5A4;
+    color: #34495e;
+}
+
+
+// ============= HOME CSS ===========================================
 
 .hhs-header {
     margin-top: 1.6667%;
@@ -200,17 +231,12 @@ nav .brand-logo p:last-child {
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
-
-    p {
-        // color: $font-color;
-        text-align: center;
-    }
+    text-align: left;
 
     p:nth-child(1) {
-        font-family: $robotfs;
-        font-weight: 500;
-        font-size: 23px;
+        font-family: $openfs;
+        font-weight: 400;
+        font-size: 22px;
         background-color: #FFF;
         width: 50%;
         padding: 15px 0;
@@ -226,21 +252,21 @@ nav .brand-logo p:last-child {
         margin: 2% 0 2% 1%;
         font-family: $openfs;
         color: #FFF;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 18px;
         padding: 10px;
-        text-align: left;
     }
 
     p:nth-child(3) {
         background-color: #FFD6A0;
         width: 60%;
-        text-align: left;
         margin: 1%;
         color: #FFF;
         opacity: 0.9;
         font-size: 22px;
         padding: 10px;
+        font-family: $openfs;
+        font-weight: 700;
         
     }
 }
@@ -266,7 +292,6 @@ nav .brand-logo p:last-child {
     -o-background-size: cover;
     background-size: cover;
     height: 345px;
-    // opacity: 0.6;
 }
 
 .quote-row {
@@ -281,7 +306,6 @@ nav .brand-logo p:last-child {
     background-color: #FFF;
     width: 100%;
     overflow: hidden;
-    // height: 100px;
 
     .quote-header {
         font-size: 22px;
@@ -291,10 +315,6 @@ nav .brand-logo p:last-child {
         font-weight: 400;
         color: $font-color;
         padding-bottom: 5px;
-    }
-
-    hr {
-        margin: 0;
     }
 }
 
@@ -325,6 +345,10 @@ nav .brand-logo p:last-child {
 
 .card .card-content {
     padding: 10px 20px;
+}
+
+.card a {
+    color: $font-color;
 }
 
 .card .card-content .card-title {
@@ -374,158 +398,8 @@ nav .brand-logo p:last-child {
     background-image: linear-gradient(to top, #FFFFFF 0%, #FFD6A0 100%);
 }
 
-.fa-none {
-    vertical-align: -4%;
-}
 
-.service-areas {
-    width: 100%;
-    float: left;
-
-    ul li {
-        h5 {
-            font-family: $robotfs;
-            font-weight: 400;
-            color: $font-color;
-        }
-
-        div {
-            font-family: $robotfs;
-            font-weight: 300;
-            color: $font-color;
-        } 
-    }
-}
-
-.secondary-content {
-    display: none;
-}
-
-.hhs-contact-form {
-    background: #546e7a;
-}
-
-.input-field label {
-    color: #FFF;
-}
-
-input[type=text], 
-input[type=password], 
-input[type=email], 
-input[type=url], 
-input[type=date], 
-input[type=tel], 
-input[type=number], 
-input[type=search], 
-textarea.materialize-textarea {
-    border-bottom: 1px solid #FFF;
-}
-
-
-input[type=submit] {
-    color: $white;
-    background-color: #16a085;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-
-
-.mdi-navigation-menu {
-    color: $font-color;
-}
-
-
-
-.dropdown-content {
-    font-family: 'Raleway';
-    text-transform: uppercase;
-    color: #304A72;
-    min-width: 200px;
-    max-height: 90%;
-
-    li {
-        font-size: 0.8rem;
-        text-align: center;
-    }
-}
-
-.btn {
-    color: $white;
-    background-color: #16a085;
-    border: none;
-    font-family: 'Raleway';
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.btn-default:hover {
-    background-color: #97D5A4;
-    color: #34495e;
-}
-
-// ================= SERVCICES ==============
-.row .col.content-wrap {
-    border-radius: 4px;
-    width: 72%; 
-}
-
-.service-header h1 {
-    font-size: 36px;
-    font-family: $robotfs;
-    font-weight: 500;
-}
-
-.ot-header h1,
-.st-header h1 {
-    font-size: 28px;
-}
-
-.service-content {
-    p {
-        font-family: $openfs;
-        font-size: 18px;
-        font-weight: 400;
-    }
-}
-
-.service-container {
-    width: 100%;
-}
-
-.service-list ul {
-    list-style-type: initial;
-}
-
-.service-list ul li {
-    list-style-type: initial;
-    font-family:  $openfs;
-    font-weight: 300;
-    font-size: 16px;
-}
-
-.map-container iframe {
-    width: 100%;
-}
-//================== CONTACT ==========
-
-.hhs-contact-form {
-    // border: 3px solid #FFD6A0;
-    // background-color: transparent;
-    // opacity: 0.4;
-}
-
-.contact-form-container {
-    background-color: #546e7a;
-}
-
-.contact-container {
-    width: 100%;
-}
-
-//=================== WHY =============
+// ============= WHY CSS ===========================================
 .why-header {
     font-size: 28px;
     font-family: $robotfs;
@@ -544,88 +418,8 @@ input[type=submit] {
     font-family: 14px;
 }
 
-//=================== FORM =============
-.row .col.form-wrap {
-    background: rgba(48, 74, 114, 0.4);
-    border-radius: 4px;
-    margin-left: 28px;
-    margin-top: 5%;
-}
 
-.row .col.form-input {
-    float: none;
-    width: 100%;
-}
-
-
-//========== FOOTER ==========
-.footer-row {
-    margin-bottom: 0;
-    position: absolute;
-    width: 100%;
-    margin-top: 5%;
-}
-
-.footer {
-    border-top: 1px solid $clouds;
-}
-
-.footer-wrap {
-    height: 50px;
-    padding: 5px 0;
-    
-    ul {
-        margin-bottom: 0;
-
-        li{
-            float: left;
-            list-style: none;
-            padding: 10px;
-        }
-    }
-}
-
-.footer-wrap ul {
-    margin-bottom: 0;
-}
-
-.footer-wrap ul li {
-    
-}
-
-.social-wrap {
-    margin-top: 0;
-    margin-left: 5%;
-    float: left;
-}
-
-.hh-icon {
-    display: inline-block;
-}
-
-.hh-icon:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale (1.2);
-    -moz-transform: scale(1.2);
-}
-
-.co-info {
-    float: left;
-    padding-left: 0;
-    margin-top: 0;
-}
-
-.site-map {
-    float: right;
-    margin-top: 0;
-
-    li a {
-        color: $font-color;
-    }
-}
-
-
-// CONTACT -------------------------------------
+// ============= CONTACT CSS ===========================================
 .contact-info-wrap {
     iframe {
         width: 100%;
@@ -658,6 +452,114 @@ input[type=submit] {
         font-family: 500;
         font-size: 20px;
     }    
+}
+
+// ============= FORM CSS ===========================================
+
+.contact-form-container {
+    background-color: #546e7a;
+}
+
+.contact-container {
+    width: 100%;
+}
+
+
+.input-field label {
+    color: #FFF;
+}
+
+input[type=text], 
+input[type=password], 
+input[type=email], 
+input[type=url], 
+input[type=date], 
+input[type=tel], 
+input[type=number], 
+input[type=search], 
+textarea.materialize-textarea {
+    border-bottom: 1px solid #FFF;
+}
+
+
+input[type=submit] {
+    color: $white;
+    background-color: #16a085;
+    border: none;
+    font-family: 'Raleway';
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.row .col.form-wrap {
+    background: rgba(48, 74, 114, 0.4);
+    border-radius: 4px;
+    margin-top: 5%;
+}
+
+.row .col.form-input {
+    float: none;
+    width: 100%;
+}
+
+
+
+// ============= FOOTER CSS ===========================================
+.footer-fixed {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    height: 80px;
+    background-color: #FFF;
+    border-bottom: 6px solid #FFD6A0;
+    width: 100%;   
+}
+
+.copyright,
+.social {
+    float: left;
+}
+
+.copyright {
+    padding: 0 10px;
+    font-family: $robotfs;
+    font-weight: 300;
+    color: $font-color;
+
+    address {
+        font-style: normal;
+    }
+}
+
+.social {
+    padding: 25px 0;
+    margin-left: 5%;
+
+    i {
+        color: $font-color;
+    }
+}
+
+
+.sitemap {
+    float: right;
+    padding: 25px 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+    ul li {
+        float: left;
+    }
+
+    ul li a {
+        color: $font-color;
+        padding: 0 10px;
+        font-family: $robotfs;
+        font-weight: 300;
+    }
 }
 
 
@@ -786,24 +688,6 @@ input[type=submit] {
     }
 }
 
-// @media only screen and (max-device-width: 992px) {
-
-//     nav .brand-logo {
-//         width: auto;
-//     }
-
-//     .nav-wrapper .phone {
-//         display: none;
-//     }
-
-//     .nav-wrapper .brand-logo {
-//         margin-left: 5%;
-//     }
-
-//     .row .col.form-wrap {
-//         margin-left: 20px;
-//     }
-// }
 
 
 

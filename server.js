@@ -1,3 +1,4 @@
+require('newrelic')
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -6,7 +7,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
 var port = process.env.PORT || 8080;
-process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'development';
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

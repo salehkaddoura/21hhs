@@ -23,7 +23,7 @@
 @import "components/grid";
 @import "components/navbar";
 @import "components/typography";
-@import "components/cards";
+@import "components/cards"; 
 @import "components/toast";
 @import "components/tabs";
 @import "components/tooltip";
@@ -43,6 +43,7 @@
 @import "components/date_picker/default.time.scss";
 
 $white: #FFF;
+$orange: #FFD6A0;
 $clouds: #ecf0f1;
 $font-color: #41658A;
 $light-green: #97d5a4;
@@ -215,7 +216,7 @@ hr {
         font-size: 22px;
         background-color: #FFF;
         width: 50%;
-        padding: 15px 0;
+        padding: 15px 5px;
         margin: 4% 0 1% 1%;
         opacity: 0.8;
         color: #41658A;
@@ -397,8 +398,25 @@ hr {
 
 // ============= CONTACT CSS ===========================================
 .contact-info-wrap {
+    h4 {
+        font-family: $robotfs;
+        color: $font-color;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: $openfs;
+        color: $font-color;
+        font-weight: 400;
+    }
+
+    hr {
+        border-color: $orange;
+    }
+
     iframe {
         width: 100%;
+        margin-top: 2%;
     }
 }
 
@@ -409,14 +427,16 @@ hr {
 .client-type-wrap {
 
     p {
-        font-family: 'Raleway';
+        font-family: $openfs;
+        color: #FFF;
         font-weight: 500;
         font-size: 20px;
+        margin-left: 2%;
     }
 
     .client-type {
         display: inline-block;
-        margin-left: 2%;        
+        margin: 1% 1% 1% 2%;        
     }
 }
 
@@ -457,6 +477,35 @@ textarea.materialize-textarea {
     border-bottom: 1px solid #FFF;
 }
 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=url]:focus, 
+input[type=date]:focus, 
+input[type=tel]:focus, 
+input[type=number]:focus, 
+input[type=search]:focus,
+textarea:focus.materialize-textarea {
+    border-bottom: 1px solid $orange;
+    box-shadow: 0 1px 0 0 $orange;
+}
+
+.input-field input[type=text]:focus + label, 
+.input-field input[type=password]:focus + label, 
+.input-field input[type=email]:focus + label, 
+.input-field input[type=url]:focus + label, 
+.input-field input[type=date]:focus + label, 
+.input-field input[type=tel]:focus + label, 
+.input-field input[type=number]:focus + label, 
+.input-field input[type=search]:focus + label, 
+.input-field textarea:focus.materialize-textarea + label{
+    color: $orange;
+}
+
+.client-type label {
+    color: #FFF;
+}
+
 
 input[type=submit] {
     color: $white;
@@ -468,9 +517,9 @@ input[type=submit] {
 }
 
 .row .col.form-wrap {
-    background: rgba(48, 74, 114, 0.4);
+    background: rgba(48, 74, 114, 0.68);
     border-radius: 4px;
-    margin-top: 5%;
+    // margin-top: 5%;
 }
 
 .row .col.form-input {
@@ -489,6 +538,11 @@ input[type=submit] {
     background-color: #FFF;
     border-bottom: 6px solid #FFD6A0;
     width: 100%;   
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.16), 0 -2px 3px 0 rgba(0, 0, 0, 0.12);
+}
+
+footer {
+
 }
 
 .copyright,
@@ -497,10 +551,14 @@ input[type=submit] {
 }
 
 .copyright {
-    padding: 0 10px;
+    padding: 10px;
     font-family: $robotfs;
     font-weight: 300;
     color: $font-color;
+
+    p {
+        margin: 0 0 10px 0;
+    }
 
     address {
         font-style: normal;
@@ -537,6 +595,57 @@ input[type=submit] {
         font-weight: 300;
     }
 }
+
+// ============= SERVICES CSS ===========================================
+.service-list {
+    ul li {
+        font-family: $robotfs;
+        color: $font-color;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    ul li i {
+        color: $orange;
+    }
+}
+
+    // ============= PT CSS ====================
+    .pt-header {
+        margin-top: 15px;
+        background: url('/images/int_topbanner2.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 285px;
+        
+    }
+
+    .pt-content {
+        h1 {
+            // background-color: $orange;
+            color: $font-color;
+            font-family: $openfs;
+            font-weight: 400;
+            text-transform: uppercase;
+            // opacity: 0.9;
+            // padding: 10px 5px;
+            // width: 50%;  
+            border-bottom: 4px solid $orange;
+            padding-bottom: 10px;
+            margin: 0;  
+        }
+
+        p {
+            color: $font-color;
+            font-family: $robotfs;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
 
 
 /* All Smartphones in portrait and landscape ----------- */

@@ -90,7 +90,13 @@ app.post('/contacthhs', function(req, res) {
             res.status(200).send('<p>Success!</p>');
         }
     });
-})
+});
+
+function keepAwake() {
+    console.log('ping!');
+}
+
+setInterval(keepAwake, 5000);
 
 app.listen(port);
 console.log('The magic happens on port ' + port);

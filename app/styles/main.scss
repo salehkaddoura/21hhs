@@ -51,6 +51,7 @@ $dark-green: #16a085;
 $robotfs: 'Roboto', 'Helvitica', 'Verdana';
 $openfs: 'Open Sans', 'Helvitica', 'Verdana'; 
 
+
 // ============= GENERAL CSS ===========================================
 @-webkit-keyframes slidy {
     0% { left: 0%; }
@@ -170,7 +171,7 @@ hr {
     text-transform: uppercase;
     color: #304A72;
     min-width: 200px;
-    max-height: 90%;
+    max-height: 100%;
 
     li {
         font-size: 0.8rem;
@@ -178,7 +179,7 @@ hr {
     }
 
     li a {
-        color: #7f8c8d;
+        color: $dark-green;
     }
 }
 
@@ -202,13 +203,19 @@ hr {
 .hhs-header {
     margin-top: 1.6667%;
     position: relative;
+    background: url('/images/medical3.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 345px;
 }
 
 .header-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
     text-align: left;
 
     p:nth-child(1) {
@@ -264,12 +271,7 @@ hr {
 }
 
 .img1 {
-    background: url('/images/medical3.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 345px;
+    
 }
 
 .quote-row {
@@ -380,8 +382,10 @@ hr {
 // ============= WHY CSS ===========================================
 .why-header {
     font-size: 28px;
-    font-family: $robotfs;
+    font-family: $openfs;
     font-weight: 500;
+    color: $dark-green;
+    // background-color: $orange;
 }
 
 .why-header h1 {
@@ -390,10 +394,10 @@ hr {
     font-weight: 500;
 }
 
-.why-body {
+.pt-content .why-body {
     font-family: $openfs;
-    font-weight: 400;
-    font-family: 14px;
+    font-weight: 300;
+    font-family: 18px;
 }
 
 
@@ -412,7 +416,7 @@ hr {
     }
 
     hr {
-        border-color: $orange;
+        border-color: $dark-green;
     }
 
     iframe {
@@ -501,8 +505,8 @@ input[type=tel]:focus,
 input[type=number]:focus, 
 input[type=search]:focus,
 textarea:focus.materialize-textarea {
-    border-bottom: 1px solid $orange;
-    box-shadow: 0 1px 0 0 $orange;
+    border-bottom: 1px solid $dark-green;
+    box-shadow: 0 1px 0 0 $dark-green;
 }
 
 .input-field input[type=text]:focus + label, 
@@ -514,7 +518,7 @@ textarea:focus.materialize-textarea {
 .input-field input[type=number]:focus + label, 
 .input-field input[type=search]:focus + label, 
 .input-field textarea:focus.materialize-textarea + label{
-    color: $orange;
+    color: $dark-green;
 }
 
 input[type=text].service-input, 
@@ -687,132 +691,122 @@ input[type=submit] {
         }
     }
 
-
-/* All Smartphones in portrait and landscape ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    
-
-    nav .brand-logo {
-        width: auto;
+    // ============= ST CSS ==================== 
+    .st-header {
+        font-size: 3.4rem;
     }
 
-    .nav-wrapper .brand-logo {
-        font-size: 1.8rem;
-        margin-left: 12%;
+    // ============= HHA CSS ==================== 
+    .service-list {
+        ul li {
+            font-family: $robotfs;
+            color: $font-color;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 5px;
+        }
+
+        ul li i {
+            color: $orange;
+        }
     }
 
-    .fa-heartbeat {
-        font-size: 1.8rem;
-    }
+// ============= SERVICES CSS ===========================================
 
-    .brand-logo.phone {
-        display: none;
-    }
-
-    .page-header h1 {
-        text-align: center;
-        font-size: 60px;
-    }
-
-    .lead {
-        font-size: 25px;
-        line-height: 30px;
-        font-weight: 400;
-    }
-
-    .row .col.content-wrap {
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) { 
+  
+  // ============== GENERAL CSS =======
+    .navbar-container {
         width: 100%;
+        padding: 0 7px;
     }
 
-    .row .col.form-wrap {
-        margin-left: 0;
-        margin-top: 10%;
+    nav {
+        .brand-logo {
+            font-size: 1rem;
+            margin-left: 14px;
+            line-height: 54px;
+        }
+
+        a.button-collapse i {
+            font-size: 2.3rem;
+            line-height: 52px;
+        }
     }
 
-    .row .col.content-wrap h4 {
-        font-size: 18px;
+  // ============== HOMEPAGE CSS =======
+    .hhs-site-container {
+        width: 100%;
+        padding: 0 1rem;
     }
 
-    .footer .container {
-        padding: 0;
+    .hhs-header {
+        padding: 0 5px;
+        height: 300px;
     }
 
-    .footer-wrap ul li {
-        float: none;
+    .header-content {
+        p:nth-child(1) {
+            width: 100%;
+            margin: 8% 0 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: $dark-green;
+        }
+
+        p:nth-child(2) {
+            display: none;
+        }
+
+        p:nth-child(3) {
+            width: 100%;
+            margin: 3% 0 0;
+            text-align: center;
+            background-color: rgba(65, 101, 138, 0.7);
+        }
     }
 
-    .co-info,
-    .social-wrap,
-    .site-map {
-        display: block;
+    .home-content h4 {
         text-align: center;
-        margin-left: 0;
-        float: none;
+        font-size: 1.8rem;
     }
 
-    .co-info li,
-    .f-hb {
+    .quote-container > .q-wrap > .quote > p {
         font-size: 1rem;
     }
 
-    .co-info li:last-child {
-        padding: 5px;
+    .quote-container > .q-wrap > .quote > p > i {
+        font-size: 0.9rem;
     }
 
-    .social-wrap li,
-    .site-map li {
-        display: inline-block;
+    .home-footer {
+        bottom: -100px;
+        margin-bottom: 0;
     }
 
-    // contact page ---------------------------------------------
-
-    .client-type-wrap .client-type {
-        font-weight: 500;
-        display: block;
+    .copyright {
+        display: none;
     }
 
-    // services ----------------------------------
-    .service {
-        width: auto;
-        margin-top: 0;
+    .social {
+        float: none;
+        padding: 10px 0;
+        text-align: center;
+        margin-left: 0;
+    }
 
-        h1 {
-            font-size: 48px;     
+    .sitemap {
+        float: none;
+        padding: 0;
+
+        ul {
+            text-align: center;
+            overflow: auto;
+            margin: 0 auto;
+            width: 80%;
         }
-        
     }
 
 }
-
-@media only screen and (min-width: 1224px) and (max-width: 1440px) {
-
-}
-
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    
-    nav .brand-logo {
-        font-size: 1.3rem;
-    }
-
-    nav .nav-wrapper i {
-        font-size: 1.3rem;
-    }
-
-    .phone {
-        margin-left: 3%;
-    }
-
-    .row .col.content-wrap {
-        width: 70%;
-    }
-
-    .row .col.form-wrap {
-        width: 28%;
-        margin-left: 13px;
-    }
-}
-
-
-
-

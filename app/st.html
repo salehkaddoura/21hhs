@@ -3,23 +3,37 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>21HHS - Physical Therapy</title>
+        <title>21HHS</title>
+
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="1 month">
+        <link type="text/plain" rel="author" href="" />
+
+        <!-- FACEBOOK OPENGRAPH TAGS -->
+        <meta property="og:title" content=""/>
+        <meta property="og:site_name" content=""/> <!-- NAME NOT URL -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="fb:page_id" content=""/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:description" content=""/>
+
+        <!-- TWITTER TAGS -->
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-        <!-- Add to homescreen for Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-        <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
+        <meta name="apple-mobile-web-app-title" content="21HHS">
 
         <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
         <!--
@@ -35,7 +49,7 @@
         <li><a href="/ot">Occupational Therapy</a></li>
         <li><a href="/st">Speech Therapy</a></li>
         <li><a href="/hha">Home Health Aide</a></li>
-        <li><a href="/mss">Medicare Social Work</a></li>
+        <li><a href="/msw">Medicare Social Work</a></li>
         <li><a href="/nursing">Skilled Nursing</a></li>
     </ul>
     <div class="navbar-fixed">
@@ -46,9 +60,9 @@
                     <a href="#" data-activates="hh-sidenav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/contact">About Us</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Services</a></li>
-                        <li><a href="/about">Contact</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                     <ul class="side-nav" id="hh-sidenav">
                         <li><a href="/">Home</a></li>
@@ -64,53 +78,55 @@
     <div class="site-wrapper">
         <div class="container service-container">
             <div class="row">
-                <div class="col s12 m9 service-content">
-                    <div class="page-header service-header st-header">
-                        <h1>Speech and Language Therapy Helps Regain Independence</h1>
-                    </div>
+                <div class="col s12 pt-header"></div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m9 service-content pt-content">
+                    <h1 class="st-header">Speech and Language Therapy</h1>
                     <p>Speech and language therapy helps individuals improve breathing, speaking, and swallowing functioning. Speech therapy focuses other ability to understand words and the ability to use words to express thought. Our team will meet, evaluate and diagnose specific communication difficulties and follow the plan of care prescribed by the physician.</p>
                     <p>We strive to improve communication, hearing, and other auditory disorders through education and modern approaches to care. Our speech pathology experts specialize in evaluating and treating speech, language, cognitive, and fluency disorders that affect communication.</p>
                     <p>Speech therapists may help individuals who suffer from:</p>
                     <div class="row">
                         <div class="col s12 m6 service-list">
                             <ul>
-                                <li>A stroke</li>
-                                <li>A heart attack</li>
-                                <li>Diffuculty swallowing</li>
-                                <li>Diffuculty speaking</li>
+                                <li><i class="fa fa-circle fa-fw"></i>&nbsp;A stroke</li>
+                                <li><i class="fa fa-circle fa-fw"></i>&nbsp;A heart attack</li>
+                                <li><i class="fa fa-circle fa-fw"></i>&nbsp;Diffuculty swallowing</li>
+                                <li><i class="fa fa-circle fa-fw"></i>&nbsp;Diffuculty speaking</li>
                             </ul>    
                         </div>
                     </div>
                 </div>
                 
                 <div class="col s12 m3 form-wrap">
-                     <form class="col s12" action="#">
+                    <form class="col s12" action="#">
                         <div class="row form-row">
                             <div class="input-field col s6 form-input">
-                                <input id="full-name" type="text" class="validate">
-                                <label for="full-name">Full Name (Required)</label>
+                                <input id="full-name" type="text" class="validate service-input">
+                                <label for="full-name" class="service-label">Full Name (Required)</label>
                             </div>
                             <div class="input-field col s6 form-input">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email (Required)</label>
+                                <input id="email" type="email" class="validate service-input">
+                                <label for="email" class="service-label">Email (Required)</label>
                             </div>
                         </div>
                         <div class="row form-row">
                             <div class="input-field col s6 form-input">
-                                <input id="telephone" type="tel">
-                                <label for="telephone">Telephone</label>
+                                <input id="telephone" type="tel" class="service-input">
+                                <label for="telephone" class="service-label">Telephone</label>
                             </div>
                             <div class="input-field col s6 form-input">
-                                <input id="zip-code" type="text">
-                                <label for="input-box">Zip Code</label>
+                                <input id="zip-code" type="text" class="service-input">
+                                <label for="input-box" class="service-label">Zip Code</label>
                             </div>
                         </div>
                         <div  class="row form-row">
                             <div class="col s12">
                                 <div style="margin-bottom: 12px;" class="row">
                                     <div class="input-field col s12 form-input">
-                                        <textarea id="input-box" class="materialize-textarea"></textarea>
-                                        <label for="icon_prefix2">Reason for referral...</label>
+                                        <textarea id="input-box" class="materialize-textarea service-txtarea"></textarea>
+                                        <label for="icon_prefix2" class="service-label">Reason for referral...</label>
                                     </div>
                                 </div>
                             </div>

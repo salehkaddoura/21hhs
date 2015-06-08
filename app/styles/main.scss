@@ -773,6 +773,18 @@ input[type=submit] {
         font-size: 1.8rem;
     }
 
+    .card.small {
+        height: 215px;
+    }
+
+    .card.msw-card {
+        height: 285px;
+
+        .card-content {
+            height: 205px;
+        }
+    }
+
     .quote-container > .q-wrap > .quote > p {
         font-size: 1rem;
     }
@@ -780,6 +792,77 @@ input[type=submit] {
     .quote-container > .q-wrap > .quote > p > i {
         font-size: 0.9rem;
     }
+
+    // ============== SERVICE CSS =======
+    .service-container {
+        padding: 0 0.5rem;
+
+        .row {
+            margin: 0;
+        }
+    }
+
+    .row .service-content {
+        padding: 0;
+    }
+
+    .row .service-list {
+        padding: 0;
+    }
+
+    .pt-header {
+        background: none;
+        height: 0;
+    }
+
+    .pt-content { 
+        h1 {
+            text-align: center;
+            font-size: 3.2rem;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .service-list ul li {
+        padding: 5px 0;
+    }
+
+    .service-form-wrap {
+        display: none;
+    }
+
+    .service-footer {
+        margin-bottom: 0;
+    }
+
+        // ============== OT CSS =======
+        .pt-content .ot-header {
+            font-size: 2.5rem;
+        }
+
+        // ============== MSW CSS =======
+        .pt-content .msw-header {
+            font-size: 2.2rem;
+        }
+
+        // ============== HHA CSS =======
+        .pt-content .hha-header {
+            font-size: 2.9rem;
+        }
+
+    // ============== CONTACT CSS =======
+    .contact-info-wrap iframe {
+        width: 100%;
+    }
+
+    .contact-info-wrap p:last-child {
+        font-size: 18px;
+    }
+
+    // ============== FOOTER CSS =======
 
     .home-footer {
         bottom: -100px;
@@ -807,6 +890,42 @@ input[type=submit] {
             margin: 0 auto;
             width: 80%;
         }
+    }
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media only screen 
+  and (min-width: 1200px) 
+  and (max-width: 1600px) { 
+
+    // ============== GENERAL CSS =======
+    nav .brand-logo {
+        font-size: 1.1rem;
+    }
+
+    nav .nav-wrapper i {
+        font-size: 1.6rem;
+        line-height: 60px;
+    }
+
+    nav ul a {
+        font-size: 1.1rem;
+    }
+
+    // ============== HOMEPAGE CSS =======
+    .header-content p:nth-child(1) {
+        width: 65%;
+        margin: 2% 0 0 1%;
+    }
+
+    // ============== CONTACT CSS =======
+    .contact-container {
+        width: 70%;
+    }
+
+    .contact-info-wrap iframe {
+        width: 62%;
     }
 
 }
